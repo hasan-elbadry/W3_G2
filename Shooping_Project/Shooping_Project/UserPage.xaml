@@ -1,0 +1,57 @@
+﻿<Page x:Class="Shooping_Project.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shooping_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPage">
+
+    <Grid x:Name="mygrid" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="178*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="138*"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="Combo" HorizontalAlignment="Left" Margin="34,11,0,0" VerticalAlignment="Top" Width="210" Height="32" Grid.Row="1"/>
+        <Label Content="Products" HorizontalAlignment="Left" Margin="34,63,0,0" VerticalAlignment="Top" Width="86" Height="26"/>
+        <DataGrid x:Name="DataGridd" Grid.Column="2" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label Content="Selected products" HorizontalAlignment="Left" VerticalAlignment="Center" Width="108" Height="26" Grid.Column="2" Grid.Row="2"/>
+        <Button x:Name="SelectedItembtn" Content="Select Item" Margin="9,174,74,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="SelectedItembtn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="DeleteLastItembtn" Content="Delete Last Item" Margin="192,174,74,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Grid.ColumnSpan="2" Height="54" VerticalAlignment="Top" Click="DeleteLastItembtn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Plusbtn" Content="+" Margin="16,54,168,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="Plusbtn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="minusbtn" Content="-" Margin="160,54,24,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="minusbtn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="counterlbl" Content="0" HorizontalAlignment="Left" Margin="94,54,0,0" Grid.Row="3" VerticalAlignment="Top" Height="48" Width="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22"/>
+    </Grid>
+</Page>

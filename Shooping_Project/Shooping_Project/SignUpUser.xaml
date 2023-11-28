@@ -1,0 +1,45 @@
+﻿<Page x:Class="Shooping_Project.SignUpUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shooping_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SignUpUser">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="641*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="245*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="SignUp User" 
+    FontSize="25"
+    HorizontalAlignment="Left"
+    VerticalAlignment="Top"
+    FontWeight="Bold"
+    Padding="10" Grid.RowSpan="2" Grid.Column="1" Margin="156,0,0,0" Height="53" Width="165"
+    />
+        <PasswordBox x:Name="Password" Grid.Row="2"
+Padding="0,5"
+BorderThickness="0,0,0,1" Margin="113,38,272,0" Grid.Column="1" Height="27" VerticalAlignment="Top"/>
+        <TextBox BorderThickness="0,0,0,1" x:Name="UserName" Margin="113,37,272,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" VerticalContentAlignment="Center" Grid.Column="1"/>
+        <Label Content="UerName" HorizontalAlignment="Left" Margin="113,6,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.008,0.197" Grid.Column="1" Height="26" Width="60"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="113,9,0,0" Grid.Row="2" RenderTransformOrigin="0.008,0.197" Grid.Column="1" Height="26" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="SignUpBtn" Content="SignUp" Margin="152,0,313,79" Grid.Row="3" Background="Black" Foreground="White" FontSize="22" Height="54" VerticalAlignment="Bottom" Grid.Column="1" Click="SignUpBtn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox BorderThickness="0,0,0,1" x:Name="Email" Margin="113,39,271,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" VerticalContentAlignment="Center" Grid.Column="1"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="113,8,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.008,0.197" Grid.Column="1" Height="26" Width="60"/>
+    </Grid>
+</Page>
