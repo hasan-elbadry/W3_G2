@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
+using System.Data.Entity.Migrations;
 
 namespace Shooping_Project
 {
@@ -85,7 +86,14 @@ namespace Shooping_Project
         {
             var text= Combo.SelectedItem.ToString().Split(' ');
             var Product = text.Last();
-            var emp = db.ProductTables.First(x=>x.ProductName== Product);
+            var emp = db.ProductTables.First(x => x.ProductName == Product);
+
+            int productnum = int.Parse(emp.productQuntity) - count;
+
+            emp.productQuntity = productnum.ToString();
+            db.ProductTables.AddOrUpdate(emp);
+            db.SaveChanges();
+
             emp.productQuntity = count.ToString();
             products.Add(emp);
             DataGridd.ItemsSource = products.ToList();
