@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,16 +28,19 @@ namespace Shooping_Project
         Shooping_cartEntities db=new Shooping_cartEntities();
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            var ad = db.UserTables.FirstOrDefault(x => x.UserName == UserName.Text && x.Password == Password.Password);
-            if (ad != null)
-            {
-                UserPage page = new UserPage();
-                this.NavigationService.Navigate(page);
-            }
-            else
-            {
-                MessageBox.Show("incorrect username or password");
-            }
+           
+                var ad = db.UserTables.FirstOrDefault(x => x.UserName == UserName.Text && x.Password == Password.Password);
+                if (ad != null)
+                {
+                    UserPage page = new UserPage();
+                    this.NavigationService.Navigate(page);
+                }
+                else
+                {
+                    MessageBox.Show("incorrect username or password");
+                }
+            
+           
         }
 
         private void SignUpBtn_Click(object sender, RoutedEventArgs e)
@@ -47,7 +51,8 @@ namespace Shooping_Project
 
         private void ForgetPassowrd_Click(object sender, RoutedEventArgs e)
         {
-
+            ForgetPassowrdUser page=new ForgetPassowrdUser();
+            this.NavigationService.Navigate(page);
         }
 
         private void ForgetPassowrd_Click(object sender, object e)

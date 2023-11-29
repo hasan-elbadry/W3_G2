@@ -20,7 +20,7 @@
             <RowDefinition Height="14*"/>
             <RowDefinition Height="138*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="Combo" HorizontalAlignment="Left" Margin="34,11,0,0" VerticalAlignment="Top" Width="210" Height="32" Grid.Row="1"/>
+        <ComboBox x:Name="Combo" IsEditable="True" HorizontalAlignment="Left" Margin="34,11,0,0" VerticalAlignment="Top" Width="210" Height="32" Grid.Row="1" FontSize="18"/>
         <Label Content="Products" HorizontalAlignment="Left" Margin="34,63,0,0" VerticalAlignment="Top" Width="86" Height="26"/>
         <DataGrid x:Name="DataGridd" Grid.Column="2" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Label Content="Selected products" HorizontalAlignment="Left" VerticalAlignment="Center" Width="108" Height="26" Grid.Column="2" Grid.Row="2"/>
@@ -38,14 +38,14 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="Plusbtn" Content="+" Margin="16,54,168,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="Plusbtn_Click">
+        <Button x:Name="Plusbtn" Content="+" Margin="29,54,168,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="Plusbtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="minusbtn" Content="-" Margin="160,54,24,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="minusbtn_Click">
+        <Button x:Name="minusbtn" Content="-" Margin="160,54,35,0" Background="Black" Foreground="White" FontSize="22" Grid.Row="3" Height="54" VerticalAlignment="Top" Click="minusbtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30"/>

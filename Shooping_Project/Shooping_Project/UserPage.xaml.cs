@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace Shooping_Project
 {
@@ -28,9 +29,9 @@ namespace Shooping_Project
         public UserPage()
         {
             InitializeComponent();
+            
             Combo.ItemsSource = db.ProductTables.ToList().Select(x=>x.ProductName);
         }
-
         public void Fun()
         {
             var productname = db.ProductTables.Select(h => h.ProductName).ToList();
@@ -80,7 +81,6 @@ namespace Shooping_Project
             Button b = new Button();
 
         }
-
         private void SelectedItembtn_Click(object sender, RoutedEventArgs e)
         {
             var text= Combo.SelectedItem.ToString().Split(' ');
@@ -108,7 +108,6 @@ namespace Shooping_Project
             {
                 MessageBox.Show("error");
             }
-           
         }
 
         private void DeleteLastItembtn_Click(object sender, RoutedEventArgs e)

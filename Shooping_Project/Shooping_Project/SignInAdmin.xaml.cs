@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,17 +28,19 @@ namespace Shooping_Project
         Shooping_cartEntities db=new Shooping_cartEntities();
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            var ad= db.AdminTables.FirstOrDefault(x=>x.UserName==UserName.Text && x.Password==Password.Password);
-            if (ad != null)
-            {
-                AdminHomePage page=new AdminHomePage();
-                this.NavigationService.Navigate(page);
-            }
-            else
-            {
-                MessageBox.Show("incorrect username or password");
-            }
+            
+                var ad = db.AdminTables.FirstOrDefault(x => x.UserName == UserName.Text && x.Password == Password.Password);
+                if (ad != null)
+                {
+                    AdminHomePage page = new AdminHomePage();
+                    this.NavigationService.Navigate(page);
+                }
+                else
+                {
+                    MessageBox.Show("incorrect username or password");
+                }
         }
+        
 
         private void ForgetPassowrd_Click(object sender, RoutedEventArgs e)
         {
