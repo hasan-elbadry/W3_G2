@@ -15,14 +15,14 @@ VerticalAlignment="Top"
 FontWeight="Bold"
 Padding="10" Margin="311,8,0,0" HorizontalAlignment="Left" Width="137" Height="45"
 />
-        <Button x:Name="Userbtn" Content="User" Margin="292,0,333,223" Background="Black" Foreground="White" FontSize="22" Height="54" VerticalAlignment="Bottom" Click="Userbtn_Click">
+        <Button x:Name="Userbtn" Content="User" Margin="292,0,333,223" Style="{StaticResource ButtonStyle}" Click="Userbtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="AdminBtn" Content="Admin" Margin="291,0,334,142" Background="Black" Foreground="White" FontSize="22" Height="54" VerticalAlignment="Bottom" Click="AdminBtn_Click">
+        <Button x:Name="AdminBtn" Content="Admin" Margin="291,0,334,142" Style="{StaticResource ButtonStyle}" Click="AdminBtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
