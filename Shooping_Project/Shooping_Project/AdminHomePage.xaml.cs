@@ -60,9 +60,11 @@ namespace Shooping_Project
             DataaGrid.ItemsSource = db.ProductTables.ToList();
         }
 
-        private void InserDatabtn_Click()
-        {
+        
 
+        private void Search_btn_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DataaGrid.ItemsSource = db.ProductTables.Where(x=>x.ProductName.Contains(Search_btn.Text)).ToList();
         }
     }
 }

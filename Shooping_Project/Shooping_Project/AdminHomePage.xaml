@@ -60,5 +60,7 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Label Content="Search" HorizontalAlignment="Left" Margin="12,0,0,32" Grid.Row="1" VerticalAlignment="Bottom" RenderTransformOrigin="0.008,0.197" Grid.Column="2" Height="26" Width="110"/>
+        <TextBox BorderThickness="0,0,0,1" x:Name="Search_btn" Margin="12,0,110,6" Grid.Row="1" TextWrapping="Wrap" VerticalContentAlignment="Center" Height="25" VerticalAlignment="Bottom" Grid.Column="2" TextChanged="Search_btn_TextChanged"/>
     </Grid>
 </Page>
