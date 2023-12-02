@@ -28,7 +28,7 @@
         <PasswordBox x:Name="Password" Grid.Row="2"
 Padding="0,5"
 BorderThickness="0,0,0,1" Margin="113,38,272,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox BorderThickness="0,0,0,1" x:Name="UserName" Margin="113,37,272,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" VerticalContentAlignment="Center" Grid.Column="1"/>
+        <TextBox BorderThickness="0,0,0,1" x:Name="UserName" Margin="113,37,272,0" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBoxStyle}"/>
         <Button x:Name="BtnLogin" Content="Login" Margin="153,0,312,101" Grid.Row="2" Background="Black" Foreground="White" FontSize="22" Click="BtnLogin_Click" Height="54" VerticalAlignment="Bottom" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="Border">

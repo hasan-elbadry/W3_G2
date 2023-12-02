@@ -59,5 +59,10 @@ namespace Shooping_Project
             db.SaveChanges();
             DataaGrid.ItemsSource = db.ProductTables.ToList();
         }
+
+        private void InserDatabtn_Click()
+        {
+
+        }
     }
 }

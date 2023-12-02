@@ -32,7 +32,7 @@ namespace Shooping_Project
                 var ad = db.UserTables.FirstOrDefault(x => x.UserName == UserName.Text && x.Password == Password.Password);
                 if (ad != null)
                 {
-                    UserPage page = new UserPage();
+                    UserPage page = new UserPage(ad);
                     this.NavigationService.Navigate(page);
                 }
                 else

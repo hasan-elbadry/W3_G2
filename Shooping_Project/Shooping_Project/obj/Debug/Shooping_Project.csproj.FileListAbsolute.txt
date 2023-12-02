@@ -115,3 +115,4 @@ C:\Users\IT\Desktop\Schooping project\Shooping_Project\Shooping_Project\obj\Debu
 C:\Users\IT\Desktop\Schooping project\Shooping_Project\Shooping_Project\obj\Debug\Shooping_Project.csproj.CopyComplete
 C:\Users\IT\Desktop\Schooping project\Shooping_Project\Shooping_Project\obj\Debug\Shooping_Project.exe
 C:\Users\IT\Desktop\Schooping project\Shooping_Project\Shooping_Project\obj\Debug\Shooping_Project.pdb
+C:\Users\HP\Desktop\Schooping project\Shooping_Project\Shooping_Project\obj\Debug\App.baml

@@ -45,7 +45,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="RefreshData" Content="Refresh Data" Margin="26,0,51,50" Grid.Row="4" Background="Black" Foreground="White" FontSize="22" Height="54" VerticalAlignment="Bottom" ButtonBase.Click="RefreshData_Click">
+        <Button x:Name="RefreshData" Content="Refresh Data" Margin="26,0,51,50" Grid.Row="4" Style="{StaticResource ButtonStyle}" ButtonBase.Click="RefreshData_Click" Height="54">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

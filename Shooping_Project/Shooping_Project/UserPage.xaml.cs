@@ -27,12 +27,13 @@ namespace Shooping_Project
         Shooping_cartEntities db=new Shooping_cartEntities();
         static int count=0;
         static List<ProductTable> products = new List<ProductTable>();
-        public UserPage()
+        public UserPage(object user)
         {
             InitializeComponent();
-            
+            this.DataContext = user;
             Combo.ItemsSource = db.ProductTables.ToList().Select(x=>x.ProductName);
         }
+
         public void Fun()
         {
             var productname = db.ProductTables.Select(h => h.ProductName).ToList();
@@ -82,6 +83,7 @@ namespace Shooping_Project
             Button b = new Button();
 
         }
+
         private void SelectedItembtn_Click(object sender, RoutedEventArgs e)
         {
             var text= Combo.SelectedItem.ToString().Split(' ');
@@ -95,7 +97,7 @@ namespace Shooping_Project
             db.SaveChanges();
 
             emp.productQuntity = count.ToString();
-            products.Add(emp);
+            products.Add(emp);  
             DataGridd.ItemsSource = products.ToList();
         }
 

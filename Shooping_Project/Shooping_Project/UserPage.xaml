@@ -53,5 +53,7 @@
             </Button.Resources>
         </Button>
         <Label x:Name="counterlbl" Content="0" HorizontalAlignment="Left" Margin="94,54,0,0" Grid.Row="3" VerticalAlignment="Top" Height="48" Width="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22"/>
+        <Label Content="UserName :" HorizontalAlignment="Left" Margin="14,22,0,0" VerticalAlignment="Top" Width="92" Height="31" FontSize="16"/>
+        <TextBlock x:Name="Userlbl" Text="{Binding UserName}" HorizontalAlignment="Left" Margin="110,25,0,0" VerticalAlignment="Top" Width="142" Height="31" FontSize="16"/>
     </Grid>
 </Page>
